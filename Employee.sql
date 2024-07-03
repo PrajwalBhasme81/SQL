@@ -1,0 +1,55 @@
+CREATE DATABASE Employee;
+USE Employee;
+CREATE TABLE Employee(id int,emp_name varchar(20),emp_id int,emp_dept varchar(20),emp_sal bigint,emp_mng varchar(20),emp_mng_name varchar(20),mng_id int,emp_exp int)
+SELECT * FROM Employee;
+INSERT Employee VALUES(1,'Prajwal', 201, 'Sales', 55000.00, 'Jane Smith', 'Jane Smith', 301, 5);
+INSERT Employee VALUES(2,'Karthik', 202, 'Marketing', 60000.00, 'Mark Spencer', 'Mark Spencer', 302, 6);
+INSERT Employee VALUES(3,'Sagar', 203, 'HR', 50000.00, 'Jane Smith', 'Jane Smith', 301, 3);
+INSERT Employee VALUES(4,'Suhail', 204, 'IT', 70000.00, 'Michael Green', 'Michael Green', 303, 8);
+INSERT Employee VALUES(5,'Natin', 205, 'Finance', 75000.00, 'Nancy Blue', 'Nancy Blue', 304, 10);
+INSERT Employee VALUES(6,'Shivu', 206, 'Sales', 52000.00, 'Jane Smith', 'Jane Smith', 301, 4);
+INSERT Employee VALUES(7,'Kavana', 207, 'Marketing', 61000.00, 'Mark Spencer', 'Mark Spencer', 302, 7);
+INSERT Employee VALUES(8,'Sairaj', 208, 'HR', 48000.00, 'Jane Smith', 'Jane Smith', 301, 2);
+INSERT Employee VALUES(9,'Naveen', 209, 'IT', 68000.00, 'Michael Green', 'Michael Green', 303, 9);
+INSERT Employee VALUES(10,'Santosh', 210, 'Finance', 76000.00, 'Nancy Blue', 'Nancy Blue', 304, 11);
+INSERT Employee VALUES(11,'Chandru', 211, 'Sales', 54000.00, 'Jane Smith', 'Jane Smith', 301, 5);
+INSERT Employee VALUES(12,'Khushi', 212, 'Marketing', 62000.00, 'Mark Spencer', 'Mark Spencer', 302, 6);
+INSERT Employee VALUES(13,'Raju', 213, 'HR', 49000.00, 'Jane Smith', 'Jane Smith', 301, 3);
+INSERT Employee VALUES(14,'Aaradhya', 214, 'IT', 71000.00, 'Michael Green', 'Michael Green', 303, 8);
+INSERT Employee VALUES(15,'Vidya', 215, 'Finance', 74000.00, 'Nancy Blue', 'Nancy Blue', 304, 9);
+INSERT Employee VALUES(16,'Karuna', 216, 'Sales', 53000.00, 'Jane Smith', 'Jane Smith', 301, 4);
+INSERT Employee VALUES(17,'Abdul', 217, 'Marketing', 63000.00, 'Mark Spencer', 'Mark Spencer', 302, 7);
+INSERT Employee VALUES(18,'Ram', 218, 'HR', 47000.00, 'Jane Smith', 'Jane Smith', 301, 2);
+INSERT Employee VALUES(19,'Vishwa', 219, 'IT', 69000.00, 'Michael Green', 'Michael Green', 303, 10);
+INSERT Employee VALUES(20,'Anand', 220, 'Finance', 78000.00, 'Mark Spencer', 'Mark Spencer', 302, 12);
+
+CREATE DATABASE Product;
+USE Product;
+CREATE TABLE Product(id int,prd_name varchar(20),prd_price double,manufactured_by int,expiry_date date,prd_brand varchar(10),prd_quantity int);
+select * from Product;
+alter table Product
+modify manufactured_by varchar(20);
+select data_type from INFORMATION_SCHEMA.columns where table_name='Product' and column_name= 'manufactured_by';
+alter table Product
+modify prd_brand varchar(20);
+select data_type from INFORMATION_SCHEMA.columns where table_name='Product' and column_name= 'prd_brand';
+insert Product values(1,'Smartphone X', 9699.99, 'TechCorp', '2026-12-31', 'TechBrand', 50);
+insert Product values(2,'Laptop Pro', 1299.99, 'CompuWorks', '2025-11-30', 'CompuBrand', 30);
+insert Product values(3,'Wireless Earbuds', 99.99, 'SoundInc', '2024-10-31', 'SoundBrand', 200);
+insert Product values(4,'4K TV', 499.99, 'VisionElectronics', '2026-09-30', 'VisionBrand', 40);
+insert Product values(5,'Smartwatch', 199.99, 'WristTech', '2025-08-31', 'WristBrand', 120);
+insert Product values(6,'Gaming Console', 399.99, 'GameWorld', '2026-07-31', 'GameBrand', 60);
+insert Product values(7,'Bluetooth Speaker', 59.99, 'SoundInc', '2024-06-30', 'SoundBrand', 150);
+insert Product values(8,'Digital Camera', 799.99, 'PhotoGear', '2025-05-31', 'PhotoBrand', 25);
+insert Product values(9,'Electric Kettle', 29.99, 'HomeEssentials', '2024-04-30', 'HomeBrand', 100);
+insert Product values(10,'Microwave Oven', 149.99, 'KitchenMaster', '2025-03-31', 'KitchenBrand', 80);
+insert Product values(11,'Fitness Tracker', 79.99, 'FitTech', '2024-02-29', 'FitBrand', 170);
+insert Product values(12,'Robot Vacuum', 249.99, 'CleanHome', '2026-01-31', 'CleanBrand', 90);
+insert Product values(13,'Air Purifier', 129.99, 'PureAir', '2025-12-31', 'PureBrand', 110);
+insert Product values(14,'Smart Thermostat', 199.99, 'EcoHome', '2026-11-30', 'EcoBrand', 60);
+insert Product values(15,'LED Desk Lamp', 19.99, 'LightTech', '2024-10-31', 'LightBrand', 200);
+insert Product values(16,'Portable Charger', 29.99, 'PowerUp', '2025-09-30', 'PowerBrand', 140);
+insert Product values(17,'Smart Doorbell', 149.99, 'SecureHome', '2026-08-31', 'SecureBrand', 75);
+insert Product values(18,'Headphones', 199.99, 'SoundInc', '2025-07-31', 'SoundBrand', 130);
+insert Product values(19,'E-Reader', 129.99, 'ReadTech', '2024-06-30', 'ReadBrand', 85);
+insert Product values(20,'E Brush', 49.99, 'DentalCare', '2025-05-30', 'DantalBrand', 85);
