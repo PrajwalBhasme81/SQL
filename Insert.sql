@@ -25,38 +25,31 @@ INSERT Employee VALUES(18,'Hemanth', 223, 'Senior', 47000.00, 'Lufer', 'Lufer', 
 INSERT Employee VALUES(19,'Prajwal', 224, 'consultant', 47000.00, 'Rocky', 'Rocky', 307, 9);
 
 
-create database Productlist;
-use productlist;
+create database Product;
+use product;
 
- select * from productlist;
-CREATE TABLE Productlist(id int,prd_name varchar(20),prd_price double,manufactured_by int,expiry_date date,prd_brand varchar(10),prd_quantity int);
-select * from Productlist;
-alter table Productlist
-alter table Productlist modify column manufactured_by varchar(20);
-select data_type from INFORMATION_SCHEMA.columns where table_name='Product' and column_name= 'manufactured_by';
-alter table Productlist
-modify prd_brand varchar(20);
-select data_type from INFORMATION_SCHEMA.columns where table_name='Product' and column_name= 'prd_brand';
-insert Productlist values(1,'Smartphone X', 9699.99, 'TechCorp', '2026-12-31', 'TechBrand', 50);
-insert Productlist values(2,'Laptop Pro', 1299.99, 'CompuWorks', '2025-11-30', 'CompuBrand', 30);
-insert Productlist values(3,'Wireless Earbuds', 99.99, 'SoundInc', '2024-10-31', 'SoundBrand', 200);
-insert Productlist values(4,'4K TV', 499.99, 'VisionElectronics', '2026-09-30', 'VisionBrand', 40);
-insert Productlist values(5,'Smartwatch', 199.99, 'WristTech', '2025-08-31', 'WristBrand', 120);
-insert Productlist values(6,'Gaming Console', 399.99, 'GameWorld', '2026-07-31', 'GameBrand', 60);
-insert Productlist values(7,'Bluetooth Speaker', 59.99, 'SoundInc', '2024-06-30', 'SoundBrand', 150);
-insert Productlist values(8,'Digital Camera', 799.99, 'PhotoGear', '2025-05-31', 'PhotoBrand', 25);
-insert Productlist values(9,'Electric Kettle', 29.99, 'HomeEssentials', '2024-04-30', 'HomeBrand', 100);
-insert Productlist values(10,'Microwave Oven', 149.99, 'KitchenMaster', '2025-03-31', 'KitchenBrand', 80);
-insert Productlist values(11,'Fitness Tracker', 79.99, 'FitTech', '2024-02-29', 'FitBrand', 170);
-insert Productlist values(12,'Robot Vacuum', 249.99, 'CleanHome', '2026-01-31', 'CleanBrand', 90);
-insert Productlist values(13,'Air Purifier', 129.99, 'PureAir', '2025-12-31', 'PureBrand', 110);
-insert Productlist values(14,'Smart Thermostat', 199.99, 'EcoHome', '2026-11-30', 'EcoBrand', 60);
-insert Productlist values(15,'LED Desk Lamp', 19.99, 'LightTech', '2024-10-31', 'LightBrand', 200);
-insert Productlist values(16,'Portable Charger', 29.99, 'PowerUp', '2025-09-30', 'PowerBrand', 140);
-insert Productlist values(17,' Doorbell', 149.99, 'SecureHome', '2026-08-31', 'SecureBrand', 75);
-insert Productlist values(18,'Headphones', 199.99, 'SoundInc', '2025-07-31', 'SoundBrand', 130);
-insert Productlist values(19,'Reader', 129.99, 'GTech', '2024-06-30', 'ReadBrand', 85);
-insert Productlist values(20,'Brush', 49.99, 'DentalCare', '2025-05-30', 'DantalBrand', 85);
+ select * from product;
+insert product values(1,'tablet',200,2024,2025,'paracetamal','good'); 
+
+insert product values(2,'biscuit',20,2021,2022,'Good day','fine'); 
+insert product values(3,'juice',200,2023,2025,'Mirinda','good'); 
+insert product values(4,'chocalate',250,2020,2024,'Dairymilk','verygood'); 
+insert product values(5,'rice',2000,2019,2024,'Bullet','good'); 
+insert product values(6,'rava',200,2021,2024,'Gold','fine'); 
+insert product values(7,'sweet',350,2024,2024,'mysorepak','good'); 
+insert product values(8,'soap',20,2024,2026,'Rin','fine'); 
+insert product values(9,'shampoo',450,2020,2025,'Dove','good'); 
+insert product values(10,'waterbottel',30,2019,2022,'Bisleri','vey good'); 
+insert product values(11,'wheat',275,2024,2025,'Godwin','ok'); 
+insert product values(12,'Oil',150,2023,2025,'Goldwinner','good'); 
+insert product values(13,'paste',20,2022,2024,'colgate','fine'); 
+insert product values(14,'facewash',500,2000,2020,'Charcoal','bad'); 
+insert product values(15,'perfume',400,2018,2020,'Fog','worst'); 
+insert product values(16,'tablet',200,2024,2025,'','good'); 
+insert product values(17,'Milkshake',200,2024,2025,'Horlicks','good'); 
+insert product values(18,'salt',20,2020,2021,'Tata','expires'); 
+insert product values(19,'coconutoil',40,2024,2025,'parachute','fine'); 
+insert product values(20,'babysoap',250,2024,2025,'Johnson','good'); 
 
 select * from employee;
 
@@ -102,35 +95,6 @@ select * from employee where mng_id like 303;
 select * from employee where emp_exp like 10;
 select * from employee where id like 3;
 
-select * from employee order by id;
-
-select * from employee order by emp_id;
-select * from employee order by emp_sal;
-
-select * from employee limit 5;
-select * from employee limit 10;
-select * from employee limit 10,15;
-select * from employee length;
-
-select upper(emp_dept)from employee;
-select upper(emp_mng)from employee;
-select upper(emp_name)from employee;
-
-select upper(emp_mng)from employee;
-select upper(emp_dept)from employee;
-select lower(emp_name)from employee;
-select lower(emp_mng_name)from employee;
-select lower(emp_mng)from employee;
-select lower(id)from employee;
-select lower(emp_sal)from employee;
-select instr(emp_name,'a')from employee;
-select instr(emp_dept,'e')from employee;
-select instr(emp_mng,'T')from employee;
-select instr(emp_mng_name,'d')from employee;
-select instr(emp_name,'h')from employee;
-
-
-
 select * from product;
 
 select * from product where id = 5 and prd_price = 199.99;
@@ -169,30 +133,12 @@ select * from product where prd_brand like "PhotoBrand";
 select * from product where manufactured_by like "SoundInc";
 select * from product where id like 19;
 
-select * from productlist order by id;
 
-select * from productlist order by id;
 
-select * from productlist order by prd_quantity;
-select * from productlist limit 5;
-select * from productlist limit 10;
-select * from productlist limit 10,15;
-select * from productlist length;
-select upper(prd_name)from productlist;
-select upper(prd_quantity)from productlist;
-select upper(manufactured_by)from productlist;
-select upper(id)from productlist;
-select upper(prd_brand)from productlist;
-select lower(prd_name)from productlist;
-select lower(prd_quantity)from productlist;
-select lower(manufactured_by)from productlist;
-select lower(id)from productlist;
-select lower(prd_brand)from productlist;
-select instr(prd_brand,'a')from productlist;
-select instr(prd_brand,'e')from productlist;
-select instr(manufactured_by,'T')from productlist;
-select instr(manufactured_by,'d')from productlist;
-select instr(manufactured_by,'c')from productlist;
+
+
+
+
 
 
 
